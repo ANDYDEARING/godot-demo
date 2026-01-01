@@ -1,0 +1,54 @@
+# =========================
+# Godot engine
+# =========================
+.import/
+.export/
+.export_presets.cfg
+
+# Godot 4 cache & editor data
+.godot/
+
+# =========================
+# Builds / exports
+# =========================
+build/
+dist/
+bin/
+
+# =========================
+# Logs & temp files
+# =========================
+*.log
+*.tmp
+*.swp
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+.DS_Store?
+Thumbs.db
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# Mono / C# (safe to include even if unused)
+# =========================
+.mono/
+.vscode/.mono/
+
+# =========================
+# Android / iOS exports
+# =========================
+android/
+ios/
+
+# =========================
+# Optional: Godot crash dumps
+# =========================
+crashlog.txt
