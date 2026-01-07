@@ -10,16 +10,25 @@ func _process(delta: float) -> void:
 	pass
 
 func game_over() -> void:
+	print("game_over() called!")
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
+	$Music.stop()
+	$DeathSound.play()
 
 func new_game():
+	print("new_game() called")
+	get_tree().call_group("mobs", "queue_free")
 	score = 0
+	print("Calling Player.start()")
 	$Player.start($StartPosition.position)
+	print("Starting StartTimer")
 	$StartTimer.start()
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
+	$Music.play()
+	print("new_game() finished")
 
 func _on_mob_timer_timeout() -> void:
 	var mob = mob_scene.instantiate()
